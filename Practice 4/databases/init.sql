@@ -52,17 +52,24 @@ CREATE TABLE IF NOT EXISTS books (
 );
 
 
-INSERT INTO books (title, author,taken)
-SELECT * FROM (SELECT '1984', 'Some Author',0) AS tmp
-WHERE NOT EXISTS (
-    SELECT title FROM books WHERE title = '1984' AND author = 'Some Author'
-) LIMIT 1;
+-- INSERT INTO books (title, author,taken)
+-- SELECT * FROM (SELECT '1984', 'Some Author',0) AS tmp
+-- WHERE NOT EXISTS (
+--     SELECT title FROM books WHERE title = '1984' AND author = 'Some Author'
+-- ) LIMIT 1;
 
-INSERT INTO books (title, author,taken)
-SELECT * FROM (SELECT 'WarandPiece', 'Faty',1) AS tmp
-WHERE NOT EXISTS (
-    SELECT title FROM books WHERE title = 'WarandPiece' AND author = 'Faty'
-) LIMIT 1;
+-- INSERT INTO books (title, author,taken)
+-- SELECT * FROM (SELECT 'WarandPiece', 'Faty',1) AS tmp
+-- WHERE NOT EXISTS (
+--     SELECT title FROM books WHERE title = 'WarandPiece' AND author = 'Faty'
+-- ) LIMIT 1;
+
+INSERT INTO books VALUE (NULL, 'Лев Толстой', 'Воина и мир'); 
+INSERT INTO books VALUE (NULL, 'Даниель Дефо', 'Робинзон Крузо'); 
+INSERT INTO books VALUE (NULL, 'Михаил Булгаков', 'Мастер и Маргарита'); 
+INSERT INTO books VALUE (NULL, 'Джордж Оруэлл', '1984'); 
+INSERT INTO books VALUE (NULL, 'Айн Рэнд', 'Атлант расправил плечи'); 
+INSERT INTO books VALUE (NULL, 'Артур Конан Дойл', 'Приключения Шерлока Холмса'); 
 
 
 USE appDB;
@@ -75,4 +82,4 @@ CREATE TABLE IF NOT EXISTS orders (
 );
 
 INSERT INTO orders 
-VALUES (1,1,"2022.05.14",1);
+VALUES (1,1,"20.10.2022",1);
