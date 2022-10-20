@@ -53,15 +53,15 @@ CREATE TABLE IF NOT EXISTS books (
 
 
 INSERT INTO books (title, author, taken)
-SELECT * FROM (SELECT '1984', 'Some Author',0) AS tmp
+SELECT * FROM (SELECT '1984', 'George Oruel',0) AS tmp
 WHERE NOT EXISTS (
-    SELECT title FROM books WHERE title = '1984' AND author = 'Some Author'
+    SELECT title FROM books WHERE title = '1984' AND author = 'George Oruel'
 ) LIMIT 1;
 
 INSERT INTO books (title, author, taken)
-SELECT * FROM (SELECT 'WarandPiece', 'Faty',1) AS tmp
+SELECT * FROM (SELECT 'Instructions', 'Smart man',1) AS tmp
 WHERE NOT EXISTS (
-    SELECT title FROM books WHERE title = 'WarandPiece' AND author = 'Faty'
+    SELECT title FROM books WHERE title = 'Instructions' AND author = 'Smart man'
 ) LIMIT 1;
 
 
