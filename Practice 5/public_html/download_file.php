@@ -5,7 +5,7 @@ header('Content-type: pdf');
 header('Expires: 0');
 
 
-header("Content-disposition: attachment; filename= file.pdf");
+header("Content-disposition: attachment; filename=file.pdf");
 //header('Content-name: '.$object->file['filename']);
 header('Content-Type:application-x/force-download');
 session_start();

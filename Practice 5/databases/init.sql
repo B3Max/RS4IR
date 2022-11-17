@@ -12,9 +12,9 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 INSERT INTO users (name, password)
-SELECT * FROM (SELECT 'Alex', '{SHA}ZFQturuB39RG4M9PMZVnxy7lfHs=') AS tmp
+SELECT * FROM (SELECT 'Max', '{SHA}QL0AFWMIX8NRZTKeof9cXsvbvu8=') AS tmp
 WHERE NOT EXISTS (
-    SELECT name FROM users WHERE name = 'Alex' AND password= '{SHA}ZFQturuB39RG4M9PMZVnxy7lfHs='
+    SELECT name FROM users WHERE name = 'Max' AND password= '{SHA}QL0AFWMIX8NRZTKeof9cXsvbvu8='
 ) LIMIT 1;
 
 INSERT INTO users (name, password)
