@@ -2,22 +2,22 @@
 session_start();
 echo "Your Login is: ";
 echo $_SESSION["login"];
-if (!strcmp($_SESSION["backgr"],"dark" )){ 
+if (!strcmp($_SESSION["backgr"], "dark")) {
     echo '<body style="background-color:grey;color:white">';
-    }
-else {
+} else {
     echo '<body style="background-color:white">';
 }
 ?>
 
 
 <html lang="ru">
+
 <head>
-<title>Hello world page</title>
-    <!-- <link rel="stylesheet" href="style.css" type="text/css"/> -->
+    <title>Hello world page</title>
 </head>
+
 <body>
     <p>Hello world!!!</p>
 </body>
-</html>
 
+</html>
